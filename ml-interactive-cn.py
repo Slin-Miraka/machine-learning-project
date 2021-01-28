@@ -257,7 +257,7 @@ def Decision_Tree_Visualisation():
     fig = ax.get_figure()
     st.pyplot(fig)
     st.write("上述为模型用于分类选择的重要变量，并更具重要性依次排序")
-    st.write("**抱歉🥺，由于作图无法显示中文，所以只能用英文变量表示**")
+    st.write("**抱歉(￣_,￣ )，由于作图无法显示中文，所以只能用英文变量表示**")
         
 
 
