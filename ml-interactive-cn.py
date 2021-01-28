@@ -136,8 +136,8 @@ def data_description(name):
                      果。178个样本中代表了三种葡萄酒，每个样本记录了13种化学分析的结果。''')
     else:
         st.write('''该数据集为威斯康星乳腺癌数据集，总共569个病例，其中212个恶性，357个良性。
-                 数据集共有10个基本变量， 代表肿瘤图片的病理参数。每个基本变量有三个维度mean, standard error, worst
-                 代表某项参数的均值，标准差和最差值， 共计是30个特征变量。''')
+                 数据集共有10个基本变量，代表肿瘤图片的病理参数。每个基本变量有三个维度mean, standard error, worst
+                 代表某项参数的均值，标准差和最差值，共计是30个特征变量。''')
 
 data_description(dataset_name)
 
@@ -189,7 +189,7 @@ def build_model():
     
     st.write('**测试集准确率**: ', round(score_test, 3))
     st.table(pd.DataFrame(confusion_matrix(y_test, test_predict),columns = cm_columns,index = cm_index))    
-    st.write("**混淆矩阵解度**：若样本实际为A，预测也为A，则为预测正确样本；若样本实际为A，模型预测为B，则为预测错误样本")
+    st.write("**混淆矩阵解读**：若样本实际为A，预测也为A，则为预测正确样本；若样本实际为A，模型预测为B，则为预测错误样本")
     
     #learning curve
     cv = ShuffleSplit(n_splits=50, test_size=0.2, random_state=0)
