@@ -36,7 +36,7 @@ with st.sidebar.header('Welcome！ o(*￣▽￣*)ブ'):
 
 with st.sidebar.header('基础参数'):
     parameter_random_state = st.sidebar.slider('随机种子个数(目的：结果复现)', 0, 1000, 42, 1)
-    split_size = st.sidebar.slider('数据拆分比例 (设置训练集的百分比)', 10, 90, 80, 5)
+    split_size = st.sidebar.slider('测试数据比例 (%)', 0.1, 0.5, 0.2, 0.05)
     
 def add_parameter_ui():  
     params = dict()
