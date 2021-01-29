@@ -181,13 +181,13 @@ test_predict = clf.predict(X_test)
 def build_model():  
     st.subheader("**2.初步搭建模型**")
     st.write("调整左侧边栏的参数，观察模型准确率，混淆矩阵的变化。")
-    st.write('**训练集准确率**: ', round(score_train, 3),'(训练样本个数)', X_train.shape[0]))
+    st.write('**训练集准确率**: ', round(score_train, 3),'(训练样本个数)', X_train.shape[0])
     #st.write([str(i) + str(j) for i, j in zip(T_cn + T_en)])
     cm_columns = ["预测为"+ i for i in T_cn]
     cm_index = ["实际为"+ i for i in T_cn]
     st.table(pd.DataFrame(confusion_matrix(y_train, train_predict),columns = cm_columns,index = cm_index))
     
-    st.write('**测试集准确率**: ', round(score_test, 3),'(测试样本个数)', X_test.shape[0]))
+    st.write('**测试集准确率**: ', round(score_test, 3),'(测试样本个数)', X_test.shape[0])
     st.table(pd.DataFrame(confusion_matrix(y_test, test_predict),columns = cm_columns,index = cm_index))    
     st.write("**混淆矩阵解读**：若样本实际为A，预测也为A，则为预测正确样本；若样本实际为A，模型预测为B，则为预测错误样本")
     
